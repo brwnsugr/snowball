@@ -1,0 +1,14 @@
+spring:
+  jpa:
+    database: h2
+    show_sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  h2:
+    console:
+      enabled: true
+  session:
+    store-type: jdbc
+
+

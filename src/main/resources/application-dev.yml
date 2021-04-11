@@ -1,0 +1,20 @@
+spring:
+  profiles:
+    active: dev
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    database: mysql
+    generate-ddl: true
+    show_sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+        ddl-auto: update
+        format_sql: true
+  datasource:
+    url: jdbc:mysql://snowball-mysql:3306/snowball?&characterEncoding=UTF-8&useSSL=false&serverTimezone=UTC
+    username: root
+    password:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  server:
+    address: 0.0.0.0

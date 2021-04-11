@@ -1,0 +1,32 @@
+version: '2'
+services:
+  mysql:
+    image: mysql:5.6.41
+    container_name: snowball-mysql
+    network_mode: "bridge"
+    volumes:
+      - /usr/local/var/mysql:/var/lib/mysql
+    environment:
+      MYSQL_DATABASE: snowball
+#      MYSQL_ROOT_PASSWORD: root
+      MYSQL_ROOT_HOST: '%'
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+    ports:
+      - 13306:3306
+#    security_opt:
+#      - seccomp:unconfined
+  snowball:
+    build: .
+    container_name: snowball
+    network_mode: "bridge"
+    links:
+      - mysql
+    ports:
+      - 8080:8080
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://snowball-mysql:3306/snowball?&characterEncoding=UTF-8&useSSL=false&serverTimezone=UTC
+    depends_on:
+      - mysql
+
+
+

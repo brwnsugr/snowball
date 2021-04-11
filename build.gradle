@@ -21,11 +21,16 @@ repositories {
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter'
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    compile 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'junit:junit:4.12'
     compileOnly 'org.projectlombok:lombok'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testCompile group: 'com.h2database', name: 'h2', version: '1.4.200'
+    implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.23'
+    compile 'org.springframework.boot:spring-boot-starter-jdbc'
+
 }
 
 test {
