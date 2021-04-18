@@ -30,7 +30,7 @@ dependencies {
     testCompile group: 'com.h2database', name: 'h2', version: '1.4.200'
     implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.23'
     compile 'org.springframework.boot:spring-boot-starter-jdbc'
-
+    compile 'org.springframework.boot:spring-boot-starter-mustache'
 }
 
 test {

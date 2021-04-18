@@ -1,32 +1,50 @@
-version: '2'
+version: '3'
 services:
   mysql:
-    image: mysql:5.6.41
+    image: mysql:8.0.23
     container_name: snowball-mysql
-    network_mode: "bridge"
+#    network_mode: bridge
     volumes:
-      - /usr/local/var/mysql:/var/lib/mysql
+      - /usr/local/var/mysql8:/var/lib/mysql
+      - ./init/:/docker-entrypoint-initdb.d/
+    command: ['mysqld', '--ft_min_word_len=2']
     environment:
       MYSQL_DATABASE: snowball
 #      MYSQL_ROOT_PASSWORD: root
-      MYSQL_ROOT_HOST: '%'
+#      MYSQL_PASSWORD: root
+#      MYSQL_USER: root
+#      MYSQL_ROOT_HOST: 0.0.0.0
       MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
     ports:
       - 13306:3306
 #    security_opt:
 #      - seccomp:unconfined
+#    networks:
+#      - backend-network
+
+
   snowball:
-    build: .
+    image: snowball
     container_name: snowball
-    network_mode: "bridge"
+#    network_mode: bridge
     links:
       - mysql
     ports:
       - 8080:8080
     environment:
       SPRING_DATASOURCE_URL: jdbc:mysql://snowball-mysql:3306/snowball?&characterEncoding=UTF-8&useSSL=false&serverTimezone=UTC
+#      SPRING_DATASOURCE_USERNAME: "root"
+#      SPRING_DATASOURCE_PASSWORD: "root"
+    build:
+      context: "./"
+      dockerfile: "Dockerfile"
+#    networks:
+#      - backend-network
     depends_on:
       - mysql
+#
+#networks:
+#  backend-network:
 
 
 
