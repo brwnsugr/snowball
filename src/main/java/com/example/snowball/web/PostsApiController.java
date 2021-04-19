@@ -1,6 +1,8 @@
 package com.example.snowball.web;
 
 import com.example.snowball.service.PostsService;
+import com.example.snowball.web.domain.posts.Posts;
+import com.example.snowball.web.domain.posts.PostsRepository;
 import com.example.snowball.web.dto.PostsListResponseDto;
 import com.example.snowball.web.dto.PostsResponseDto;
 import com.example.snowball.web.dto.PostsSaveRequestDto;
@@ -21,6 +23,7 @@ import java.util.List;
 public class PostsApiController {
 
   private final PostsService postsService;
+  private final PostsRepository postsRepository;
 
   @PostMapping("/api/v1/posts")
   public Long save(@RequestBody PostsSaveRequestDto requestDto) {
@@ -37,6 +40,7 @@ public class PostsApiController {
     postsService.delete(id);
     return id;
   }
+
 
   @GetMapping("/api/v1/posts/{id}")
   public PostsResponseDto findById(@PathVariable Long id) {
