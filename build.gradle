@@ -27,10 +27,12 @@ dependencies {
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testCompile 'org.springframework.security:spring-security-test'
     testCompile group: 'com.h2database', name: 'h2', version: '1.4.200'
     implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.23'
     compile 'org.springframework.boot:spring-boot-starter-jdbc'
     compile 'org.springframework.boot:spring-boot-starter-mustache'
+    compile 'org.springframework.boot:spring-boot-starter-oauth2-client'
 }
 
 test {

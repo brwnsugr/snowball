@@ -1,4 +1,5 @@
 spring:
+  profiles.include: oauth
   jpa:
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
     database: mysql
@@ -13,4 +14,5 @@ spring:
     username: root
     password:
     driver-class-name: com.mysql.cj.jdbc.Driver
+
 
