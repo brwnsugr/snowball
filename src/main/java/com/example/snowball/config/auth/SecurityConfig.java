@@ -12,7 +12,7 @@ import org.springframework.security.oauth2.client.userinfo.OAuth2UserService;
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
-  private final OAuth2UserService oAuth2UserService;
+  private final CustomOAuth2UserService customOAuth2UserService;
 
   @Override
   protected void configure(HttpSecurity http) throws Exception {
@@ -30,7 +30,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         .and()
         .logout().logoutSuccessUrl("/")
         .and()
-        .oauth2Login().userInfoEndpoint().userService(oAuth2UserService);
+        .oauth2Login().userInfoEndpoint().userService(customOAuth2UserService);
   }
 
 }

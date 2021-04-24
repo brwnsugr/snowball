@@ -1,7 +1,6 @@
 package com.example.snowball.web.domain.user;
 
 import com.example.snowball.web.domain.BaseTimeEntity;
-import javax.management.relation.Role;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -50,7 +49,7 @@ public class User extends BaseTimeEntity {
   }
 
   public String getRoleKey() {
-    return this.role.getRoleName();
+    return this.role.getKey();
   }
 
 }
