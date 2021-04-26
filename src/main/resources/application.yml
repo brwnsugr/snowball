@@ -14,5 +14,11 @@ spring:
     username: root
     password:
     driver-class-name: com.mysql.cj.jdbc.Driver
+  session:
+    store-type: jdbc
+    timeout: 600
+    jdbc:
+      initialize-schema: always
+      table-name: SPRING_SESSION
 
 

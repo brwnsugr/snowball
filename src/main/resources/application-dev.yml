@@ -3,10 +3,10 @@ spring:
   jpa:
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
     database: mysql
-    generate-ddl: false
+    generate-ddl: true
     show_sql: true
     hibernate:
-      ddl-auto: none
+      ddl-auto: create
       dialect: org.hibernate.dialect.MySQL5InnoDBDialect
       format_sql: true
   datasource:
@@ -14,5 +14,11 @@ spring:
     username: root
     password:
     driver-class-name: com.mysql.jdbc.Driver
+  session:
+    store-type: jdbc
+    timeout: 600
+    jdbc:
+      initialize-schema: always
+      table-name: SPRING_SESSION
 #  server:
 #    address: 0.0.0.0
