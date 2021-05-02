@@ -1,24 +1,14 @@
 spring:
-  profiles.include: oauth
+  profiles:
+    include: real-oauth
   jpa:
-    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
-    database: mysql
-    generate-ddl: true
     show_sql: true
     properties:
       hibernate:
-        ddl-auto: update
-        format_sql: true
-  datasource:
-    url: jdbc:mysql://localhost:13306/snowball?&characterEncoding=UTF-8
-    username: root
-    password:
-    driver-class-name: com.mysql.cj.jdbc.Driver
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+  h2:
+    console:
+      enabled: true
   session:
     store-type: jdbc
-    timeout: 600
-    jdbc:
-      initialize-schema: always
-      table-name: SPRING_SESSION
-
 
