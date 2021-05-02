@@ -15,9 +15,9 @@ cache:
 script: "./gradlew clean build"
 
 before_deploy:
-  - zip -r springboot-snowball
+  - zip -r snowball
   - mkdir -p deploy
-  - mv springboot-snowball.zip deploy/springboot-snowball.zip
+  - mv snowball.zip deploy/snowball.zip
 
 deploy:
   - provider: s3
