@@ -1,0 +1,9 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: none
+  datasource:
+    url: dbaddress
+    username: username
+    password: password
+    driver-class-name: org.mariadb.jdbc.Driver
