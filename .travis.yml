@@ -24,9 +24,9 @@ deploy:
     access_key_id: $AWS_ACCESS_KEY #Travis repo setting 에 설정된 값
     secret_access_key: $AWS_SECRET_KEY #Travis repo settings 에 설정된 값
     bucket: snowball-springboot-build
-    region: ap-northwest-2
+    region: ap-northeast-2
     skip_cleanup: true
-    acl: private # zip 파일 접근을 priavte 으로
+    acl: private # zip 파일 접근을 private 으로
     local_dir: deploy # before_deploy 에서 생성한 디렉토리
     wait-until-deployed: true
 
