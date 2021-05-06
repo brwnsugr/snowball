@@ -1,14 +1,19 @@
 spring:
   profiles:
     include: real-oauth
-  jpa:
-    show_sql: true
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-  h2:
-    console:
-      enabled: true
-  session:
-    store-type: jdbc
+#  datasource:
+#    url: jdbc:mysql://localhost:13306?&characterEncoding=UTF-8&useSSL=false&serverTimezone=UTC
+#    username: root
+#    password:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#  jpa:
+#    show_sql: true
+#    properties:
+#      hibernate:
+#        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+#  h2:
+#    console:
+#      enabled: true
+#  session:
+#    store-type: jdbc
 
