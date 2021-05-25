@@ -26,7 +26,9 @@ public class HelloController {
 
   @GetMapping("/hello-youtube")
   public String youtubeHello() {
-    youtubeService.get().toString();
+    YoutubeDto youtubeDto = youtubeService.get();
+    String title = youtubeDto.getTitle();
+    return title;
   }
 
 
