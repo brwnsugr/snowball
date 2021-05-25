@@ -20,7 +20,7 @@ public class YoutubeController {
 //    this.youtubeProvider = youtubeProvider;
 //  }
 
-  @GetMapping("youtube")
+  @GetMapping("/api/v1/youtube")
   public YoutubeDto Index() {
     return youtubeService.get();
   }
