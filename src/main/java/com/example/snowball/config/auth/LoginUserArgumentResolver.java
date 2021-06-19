@@ -2,6 +2,7 @@ package com.example.snowball.config.auth;
 
 
 import com.example.snowball.config.auth.dto.SessionUser;
+import com.example.snowball.web.domain.user.Role;
 import javax.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import org.springframework.core.MethodParameter;

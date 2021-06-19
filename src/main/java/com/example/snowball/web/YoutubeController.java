@@ -1,9 +1,10 @@
 package com.example.snowball.web;
 
+import com.example.snowball.config.auth.LoginUser;
 import com.example.snowball.service.YoutubeService;
 
 
-import com.example.snowball.service.YoutubeService;
+import com.example.snowball.web.domain.user.Role;
 import com.example.snowball.web.dto.YoutubeDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,9 +21,21 @@ public class YoutubeController {
 //    this.youtubeProvider = youtubeProvider;
 //  }
 
+  @LoginUser(isAuth = Role.USER)
   @GetMapping("/api/v1/youtube")
   public YoutubeDto Index() {
     return youtubeService.get();
+  }
+
+
+  @GetMapping("/api/v1/youtube-channel")
+  public void test() {
+    youtubeService.getAllVideosFromChannel();
+  }
+
+  @GetMapping("/api/v1/youtube-channel-section")
+  public void test2() {
+    youtubeService.channelSection();
   }
 
 }
