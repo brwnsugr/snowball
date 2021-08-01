@@ -9,6 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 import javax.annotation.Resource;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -21,13 +22,15 @@ public class RegistAccessTokenService {
   @Resource
   ServerProperty serverProperty;
 
+  @Value("${server.cookie-secret}") private String cookieSecretKey;
+
   private final JwtTokenProvider jwtTokenProvider;
   private final CoreService coreService;
 
   @Transactional
   public LoginTokenResDto regist(String email, String userId, String machineId, String sessionUuid)
     throws Exception{
-    String encUserId = AES256Util.encrypt(userId, serverProperty.getCookieSecret());
+    String encUserId = AES256Util.encrypt(userId, cookieSecretKey);
     Map<String, Object> claims = new HashMap<>();
     claims.put(CoreService.EID, encUserId);
     claims.put(CoreService.MACHINE_ID, machineId);
