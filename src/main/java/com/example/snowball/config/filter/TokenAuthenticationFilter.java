@@ -23,7 +23,7 @@ public class TokenAuthenticationFilter extends OncePerRequestFilter {
 
 
   private static final String[] PUBLIC_URI = {
-      "/swagger-ui.html","/api/v1/user/signup", "/api/v1/helo", "api/v1/user/login", "/webjars/springfox-swagger-ui/springfox.css"
+     "/", "/swagger-ui.html","/api/v1/user/signup", "/api/v1/helo", "api/v1/user/login", "/webjars/springfox-swagger-ui/springfox.css"
   };
 //  private final UserService userService;
   @Autowired JwtTokenProvider jwtTokenProvider;
