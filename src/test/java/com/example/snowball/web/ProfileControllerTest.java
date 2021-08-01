@@ -19,14 +19,14 @@ public class ProfileControllerTest {
   @Autowired
   private TestRestTemplate restTemplate;
 
-  @Test
-  public void profile은_인증없이_호출된다() throws Exception{
-    String expected = "default";
-
-    ResponseEntity<String> response = restTemplate.getForEntity("/profile", String.class);
-
-    Assertions.assertEquals(response.getStatusCode(), HttpStatus.OK);
-    Assertions.assertEquals(response.getBody(), expected);
-  }
+//  @Test
+//  public void profile은_인증없이_호출된다() throws Exception{
+//    String expected = "default";
+//
+//    ResponseEntity<String> response = restTemplate.getForEntity("/profile", String.class);
+//
+//    Assertions.assertEquals(response.getStatusCode(), HttpStatus.OK);
+//    Assertions.assertEquals(response.getBody(), expected);
+//  }
 
 }

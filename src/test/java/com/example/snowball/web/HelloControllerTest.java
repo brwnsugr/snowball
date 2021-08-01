@@ -21,29 +21,29 @@ public class HelloControllerTest {
   @Autowired
   private MockMvc mvc;
 
-  @Test
-  @WithMockUser(roles="USER")
-  public void hello_가_리턴된다() throws Exception {
-    String hello = "hello";
-
-    mvc.perform(get("/hello"))
-        .andExpect(status().isOk())
-        .andExpect(content().string(hello));
-  }
-
-  @Test
-  @WithMockUser(roles="USER")
-  public void helloDto가_리턴된다() throws Exception {
-    String name = "hello";
-    int amount = 1000;
-
-    mvc.perform(get("/hello/dto")
-        .param("name", name)
-        .param("amount", String.valueOf(amount))
-    )
-        .andExpect(status().isOk())
-        .andExpect(jsonPath("$.name", is(name)))
-        .andExpect(jsonPath("$.amount", is(amount)));
-  }
+//  @Test
+//  @WithMockUser(roles="USER")
+//  public void hello_가_리턴된다() throws Exception {
+//    String hello = "hello";
+//
+//    mvc.perform(get("/hello"))
+//        .andExpect(status().isOk())
+//        .andExpect(content().string(hello));
+//  }
+//
+//  @Test
+//  @WithMockUser(roles="USER")
+//  public void helloDto가_리턴된다() throws Exception {
+//    String name = "hello";
+//    int amount = 1000;
+//
+//    mvc.perform(get("/hello/dto")
+//        .param("name", name)
+//        .param("amount", String.valueOf(amount))
+//    )
+//        .andExpect(status().isOk())
+//        .andExpect(jsonPath("$.name", is(name)))
+//        .andExpect(jsonPath("$.amount", is(amount)));
+//  }
 
 }
