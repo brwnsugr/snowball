@@ -1,6 +1,6 @@
 package com.example.snowball.service.youtube.spec;
 
-import com.example.snowball.web.dto.YoutubeDto;
+import com.example.snowball.dto.YoutubeDto;
 
 public interface YoutubeProvider {
 

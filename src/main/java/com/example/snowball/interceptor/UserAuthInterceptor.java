@@ -5,7 +5,7 @@ import com.example.snowball.config.auth.LoginUser;
 import com.example.snowball.config.auth.dto.SessionUser;
 import com.example.snowball.exception.UserAuthException;
 import com.example.snowball.service.UserService;
-import com.example.snowball.web.domain.user.Role;
+import com.example.snowball.domain.user.Role;
 import java.lang.annotation.Annotation;
 import java.util.Optional;
 import javax.servlet.http.HttpServletRequest;

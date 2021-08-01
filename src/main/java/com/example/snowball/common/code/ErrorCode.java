@@ -79,6 +79,8 @@ public enum ErrorCode {
   EXPIRED_JWT("0290", "토큰이 만료되었습니다."),
   WRONG_JWT("0291", "잘못된 형식의 토큰입니다."),
   NO_EXIST_JWT("0292", "만료되었거나 등록되지 않은 Token입니다."),
+  EXIST_LOGIN_ID("0294", "이미 아이디가 존재합니다."),
+  NO_EXIST_LOGIN_ID("0295", "아이디가 존재하지 않습니다."),
   DIFF_MACHINE_ID("0293", "기기 ID 값이 다릅니다.");
 
   /** Unchargeable project warranty error code. */

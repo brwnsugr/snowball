@@ -1,11 +1,11 @@
 package com.example.snowball.service;
 
-import com.example.snowball.web.domain.posts.Posts;
-import com.example.snowball.web.domain.posts.PostsRepository;
-import com.example.snowball.web.dto.PostsListResponseDto;
-import com.example.snowball.web.dto.PostsResponseDto;
-import com.example.snowball.web.dto.PostsSaveRequestDto;
-import com.example.snowball.web.dto.PostsUpdateRequestDto;
+import com.example.snowball.domain.posts.Posts;
+import com.example.snowball.domain.posts.PostsRepository;
+import com.example.snowball.dto.PostsListResponseDto;
+import com.example.snowball.dto.PostsResponseDto;
+import com.example.snowball.dto.PostsSaveRequestDto;
+import com.example.snowball.dto.PostsUpdateRequestDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

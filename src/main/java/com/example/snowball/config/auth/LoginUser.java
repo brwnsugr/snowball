@@ -1,6 +1,6 @@
 package com.example.snowball.config.auth;
 
-import com.example.snowball.web.domain.user.Role;
+import com.example.snowball.domain.user.Role;
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

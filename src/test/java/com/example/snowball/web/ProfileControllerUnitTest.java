@@ -1,5 +1,6 @@
 package com.example.snowball.web;
 
+import com.example.snowball.controller.ProfileController;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.mock.env.MockEnvironment;

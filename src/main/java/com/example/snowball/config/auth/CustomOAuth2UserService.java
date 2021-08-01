@@ -2,8 +2,8 @@ package com.example.snowball.config.auth;
 
 import com.example.snowball.config.auth.dto.OAuthAttributes;
 import com.example.snowball.config.auth.dto.SessionUser;
-import com.example.snowball.web.domain.user.User;
-import com.example.snowball.web.domain.user.UserRepository;
+import com.example.snowball.domain.user.User;
+import com.example.snowball.domain.user.UserRepository;
 import java.util.Collections;
 import javax.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;

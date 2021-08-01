@@ -41,4 +41,5 @@ out/
 ## application-oauth.yml
 application-oauth.yml
 application-dev.yml
+.DS_Store
 

@@ -1,6 +1,6 @@
 package com.example.snowball.config.auth.dto;
 
-import com.example.snowball.web.domain.user.User;
+import com.example.snowball.domain.user.User;
 import java.io.Serializable;
 import lombok.Getter;
 

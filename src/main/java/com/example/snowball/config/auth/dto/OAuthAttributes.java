@@ -1,7 +1,7 @@
 package com.example.snowball.config.auth.dto;
 
-import com.example.snowball.web.domain.user.Role;
-import com.example.snowball.web.domain.user.User;
+import com.example.snowball.domain.user.Role;
+import com.example.snowball.domain.user.User;
 import java.util.Map;
 import lombok.Builder;
 import lombok.Getter;

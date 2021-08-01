@@ -1,7 +1,7 @@
 package com.example.snowball.service;
 
 import com.example.snowball.service.youtube.spec.YoutubeProvider;
-import com.example.snowball.web.dto.YoutubeDto;
+import com.example.snowball.dto.YoutubeDto;
 import com.google.api.client.googleapis.json.GoogleJsonResponseException;
 import com.google.api.client.http.HttpRequest;
 import com.google.api.client.http.HttpRequestInitializer;
@@ -11,14 +11,11 @@ import com.google.api.client.json.JsonFactory;
 import com.google.api.client.json.jackson2.JacksonFactory;
 import com.google.api.services.youtube.YouTube;
 import com.google.api.services.youtube.YouTube.ChannelSections;
-import com.google.api.services.youtube.YouTube.Channels;
 import com.google.api.services.youtube.model.ChannelListResponse;
-import com.google.api.services.youtube.model.ChannelSection;
 import com.google.api.services.youtube.model.ChannelSectionListResponse;
 import com.google.api.services.youtube.model.Thumbnail;
 import com.google.api.services.youtube.model.Video;
 import com.google.api.services.youtubeAnalytics.v2.YouTubeAnalytics;
-import com.google.api.services.youtubeAnalytics.v2.YouTubeAnalytics.Reports;
 import com.google.api.services.youtubeAnalytics.v2.YouTubeAnalytics.Reports.Query;
 import com.google.api.services.youtubeAnalytics.v2.model.QueryResponse;
 import java.io.IOException;
